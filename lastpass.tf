@@ -7,10 +7,10 @@
 #  }
 #}
 
-data "external" "lastpass_credentials" {
-  program = ["sh", "/home/ankur/Downloads/tanzu/tanzify-username-live/gcp-PA-arau/us-east1/demo1/_scripts/script.sh"]
+data "local_file" "credentials_file" {
+  filename = "/home/ankur/Downloads/tanzu/tanzify-username-live/gcp-PA-arau/us-east1/demo1/_scripts/gke-sda-credentials.json"
 }
 
 output "google-service-key" {
-  value = jsondecode(data.external.lastpass_credentials.result)
+  value = jsondecode(data.local_file.credentials_file.content)
 }
