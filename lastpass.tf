@@ -8,7 +8,7 @@
 #}
 
 data "local_file" "credentials_file" {
-  filename = "/home/ankur/Downloads/tanzu/tanzify-username-live/gcp-PA-arau/us-east1/demo1/_scripts/notional-cocoa-359911-3f3f8e6af0db.json"
+  filename = "/home/ubuntu/tanzu/tanzify-username-live/gcp-PA-arau/us-east1/demo1/_scripts/credentials.json"
 }
 
 output "google-service-key" {
